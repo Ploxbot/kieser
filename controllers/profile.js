@@ -5,7 +5,7 @@ const router = express.Router()
 //PROFILE VIEW CONTROLLER
 router.get('/', (req, res) => {
   console.log('profile')
-  res.send('profilepage')
+  res.render('profile')
 })
 
 //PROFILE UPDATE CONTROLLER

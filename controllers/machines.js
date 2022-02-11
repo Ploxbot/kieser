@@ -5,7 +5,7 @@ const router = express.Router()
 //MACHINES VIEW CONTROLLER
 router.get('/', (req, res) => {
   console.log('machinespage')
-  res.send('machinespage')
+  res.render('machines/one')
 })
 
 module.exports = router

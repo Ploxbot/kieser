@@ -5,7 +5,12 @@ const router = express.Router()
 //RECORDS VIEW CONTROLLER
 router.get('/', (req, res) => {
   console.log('recordspage')
-  res.send('recordspage')
+  res.render('records/list')
+})
+//ONE RECORD VIEW CONTROLLER
+router.get('/:id', (req, res) => {
+  console.log('recordspage')
+  res.render('records/one')
 })
 
 //POST RECORDS CONTROLLER
