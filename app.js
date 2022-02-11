@@ -48,7 +48,7 @@ require('./express-sessions')(app)
 
 app.use('/', require('./controllers/'))
 
-app.use('/history', require('./controllers/history'))
+app.use('/records', require('./controllers/records'))
 
 app.use('/machines', require('./controllers/machines'))
 
