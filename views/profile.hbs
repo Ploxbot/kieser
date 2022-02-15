@@ -17,15 +17,15 @@
       />
       <form
         class="justify-content-center text-white mt-5 mb-3 p-0"
-        action="index.html"
+        action="/profile?_method=PATCH"
         method="post"
       >
         <div class="m-3 text-center">
           <input
             class="text-center rounded-pill px-4 py-2"
             type="text"
-            name=" "
-            value=""
+            name="email"
+            value="{{user.email}}"
             placeholder="E-MAIL"
           />
         </div>
@@ -33,13 +33,12 @@
           <input
             class="text-center rounded-pill px-4 py-2"
             type="text"
-            name=" "
-            value=""
+            name="password"
+            value="{{user.password}}"
             placeholder="PASSWORD"
           />
         </div>
         <button
-          type="button"
           class="rounded-pill text-white border-0 px-5 py-2"
           style="background-color: rgb(29,113,187)"
         >
