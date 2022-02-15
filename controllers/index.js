@@ -21,9 +21,28 @@ router.get('/info', (req, res) => {
 })
 
 //LOGIN POST CONTROLLER
-router.post('/', (req, res) => {
-  console.log('loggedin')
-  res.send('loggedin')
+
+router.post('/', async (req, res, next) => {
+  try {
+    let loginUser = await Users.findOne({
+      email: req.body.email,
+      password: req.body.password
+    })
+    //console.log(loginUser)
+    if (loginUser) {
+      req.login(loginUser, err => {
+        if (err) {
+          throw err
+        } else {
+          res.redirect('/profile')
+        }
+      })
+    } else {
+      throw new Error('Whrong email or password!')
+    }
+  } catch (err) {
+    next(err)
+  }
 })
 
 //SIGNUP POST CONTROLLER
