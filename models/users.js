@@ -4,10 +4,10 @@ const mongoose = require('mongoose')
 //USER MODEL
 
 module.exports = mongoose.model('users', {
-	name: {
-		type: String,
-		required: true
-	},
+	// name: {
+	// 	type: String,
+	// 	required: true
+	// },
 	password: {
 		type: String,
 		required: true

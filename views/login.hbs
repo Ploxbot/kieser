@@ -17,14 +17,14 @@
       />
       <form
         class="justify-content-center text-white mt-5 mb-3 p-0"
-        action="index.html"
+        action="/"
         method="post"
       >
         <div class="m-3 text-center">
           <input
             class="text-center rounded-pill px-4 py-2"
             type="text"
-            name=" "
+            name="email"
             value=""
             placeholder="E-MAIL"
           />
@@ -33,7 +33,7 @@
           <input
             class="text-center rounded-pill px-4 py-2"
             type="text"
-            name=" "
+            name="password"
             value=""
             placeholder="PASSWORD"
           />
@@ -45,11 +45,11 @@
           LOGIN
         </button>
       </form>
+     
       <button
         class="rounded-pill text-white border-0 px-4 py-1"
         style="background-color: rgb(26,67,105); font-size: 15px"
-      >
-        SIGNUP
+      > <a href="/signup">SIGNUP</a>
       </button>
     </div>
     {{> navbar}}

@@ -36,8 +36,12 @@ app.use(express.static(path.join(__dirname, 'public')))
 mongoose.connect(
   process.env.MONGODB_URL,
   { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false },
-  () => {
-    console.log('Connected to MongoDB')
+  err => {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log('Connected to MongoDB')
+    }
   }
 )
 
