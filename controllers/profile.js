@@ -11,7 +11,7 @@ router.get('/', async (req, res, next) => {
 try {
     //console.log('profile')
   if (!req.isAuthenticated()) {
-    res.render('/login')
+    res.render('login')
   } else {
     let user = await Users.findById(req.user._id)
     res.render('profile', { user: req.user, user })
@@ -25,7 +25,7 @@ try {
 router.patch('/', async (req, res, next) => {
   try {
     if (!req.isAuthenticated()) {
-      res.render('/login')
+      res.render('login')
     } else {
       let updatedUser = await Users.findByIdAndUpdate(req.user._id, req.body, {
         new: true
