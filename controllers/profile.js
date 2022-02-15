@@ -25,7 +25,7 @@ try {
 router.patch('/', async (req, res, next) => {
   try {
     if (!req.isAuthenticated()) {
-      res.render('/auth/login')
+      res.render('/login')
     } else {
       let updatedUser = await Users.findByIdAndUpdate(req.user._id, req.body, {
         new: true
@@ -43,5 +43,23 @@ router.patch('/', async (req, res, next) => {
     next(err)
   }
 })
+
+//LOGOUT
+router.get('/logout', (req, res, next) => {
+  try {
+    req.logout()
+    //console.log(req.session)
+    req.session.destroy(err => {
+      if (err) {
+        next(err)
+      }
+      res.clearCookie('connect.sid')
+      res.redirect('/')
+    })
+  } catch (err) {
+    next(err)
+  }
+})
+
 
 module.exports = router
