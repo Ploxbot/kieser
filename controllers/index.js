@@ -34,7 +34,7 @@ router.post('/', async (req, res, next) => {
         if (err) {
           throw err
         } else {
-          res.redirect('/profile')
+          res.redirect('/plans')
         }
       })
     } else {
@@ -58,7 +58,7 @@ router.post('/signup', async (req, res, next) => {
         if (err) {
           throw err
         } else {
-          res.redirect('/')
+          res.redirect('/plans')
         }
       })
     }
