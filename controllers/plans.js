@@ -15,7 +15,7 @@ router.get('/', async (req, res, next) => {
       res.render('login')
     } else {
       let user = await Users.findById(req.user._id)
-      console.log(user)
+      //console.log(user)
       //req.query.user = req.user._id
       let plan = await Plans.find({user: req.user._id})
       //console.log(plan)
@@ -64,9 +64,11 @@ try {
   if (!req.isAuthenticated()) {
     res.render('login')
   } else {
+    let allPlans = await Plans.find({user: req.user._id})
+    let length = allPlans.length  
+   //console.log('allplans', length)  
+    req.body.title = "Plan " + length
     req.body.user = req.user._id
-    req.body.title = `Plan X`
-    //console.log(req.body.length)
     let plan = await Plans.create(req.body)
     //console.log(plan)
     res.redirect(`/plans/${plan._id}`)
