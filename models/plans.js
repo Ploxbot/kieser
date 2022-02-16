@@ -1,5 +1,8 @@
 //IMPORTS
 const mongoose = require('mongoose')
+const ObjectId = mongoose.Schema.Types.ObjectId
+
+
 
 //PLANS MODEL
 
@@ -11,12 +14,10 @@ module.exports = mongoose.model('plans', {
 	},
 	title: {
 		type: String,
-		required: true
 	},
 	machines: [
 		{
-			type: ObjectId,
-			ref: 'machines',
+			type: String, 
 			required: true
 		}
 	]
