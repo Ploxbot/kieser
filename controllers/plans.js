@@ -2,6 +2,11 @@
 const express = require('express')
 const router = express.Router()
 
+//Models
+const Plans = require('../models/plans')
+const Users = require('../models/users')
+
+
 //PLANS VIEW CONTROLLER
 router.get('/', (req, res) => {
   console.log('planspage')
@@ -35,10 +40,23 @@ router.get('/:id/edit', (req, res) => {
 })
 
 //CREAT PLAN POST CONTROLLER
-router.post('/', (req, res) => {
-  console.log('plan created')
-  res.send('plan created')
+router.post('/', async (req, res, next) => {
+try {
+  if (!req.isAuthenticated()) {
+    res.render('login')
+  } else {
+    req.body.user = req.user._id
+    req.body.title = 'Plan X'
+    console.log(req.body)
+    let plan = await Plans.create(req.body)
+    //console.log(house)
+    res.redirect(`/plans/${plan._id}`)
+  }
+} catch (err) {
+  next(err)
+}
 })
+
 
 //EDIT PLAN PATCH CONTROLLER
 router.patch('/', (req, res) => {
