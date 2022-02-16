@@ -31,7 +31,7 @@ router.get('/', async (req, res, next) => {
 //CREATE PLAN VIEW CONTROLLER
 router.get('/create', (req, res, next) => {
   try {
-     //console.log('creat plan page')
+     //console.log('create plan page')
     if (!req.isAuthenticated()) {
       res.render('login')
     } else {
@@ -59,6 +59,7 @@ router.get('/:id/edit', async (req, res, next) => {
       res.render('login')
     } else {
       let editedPlan = await Plans.findById(req.params.id).populate('user')
+      
       //console.log('EDITED PLAN', editedPlan)
       res.render('plans/edit', { user: req.user, editedPlan })
     }
@@ -114,7 +115,6 @@ router.delete('/:id', async (req, res, next) => {
       res.render('/auth/login')
     } else {
       let deletedPlan = await Plans.findByIdAndDelete(req.params.id)
-
       // console.log({ deletedPlan })
       res.redirect('/plans')
     }

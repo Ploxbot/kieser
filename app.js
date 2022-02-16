@@ -20,6 +20,16 @@ app.set('view engine', 'hbs')
 app.set('view options', { layout: 'layouts/main' })
 hbs.registerPartials(__dirname + '/views/partials', err => {})
 hbsUtils.registerWatchedPartials(__dirname + '/views/partials')
+
+hbs.registerHelper(
+  'checkSelected', 
+  function(elem, list) {
+    if(list.indexOf(elem) > -1) {
+      return 'checked'
+    }
+    return '';
+}
+)
 require('./hbs-helpers')
 
 // Middleware
