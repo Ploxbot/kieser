@@ -65,10 +65,10 @@ try {
     res.render('login')
   } else {
     req.body.user = req.user._id
-    req.body.title = 'Plan X'
-    //console.log(req.body)
+    req.body.title = `Plan X`
+    //console.log(req.body.length)
     let plan = await Plans.create(req.body)
-    //console.log(house)
+    //console.log(plan)
     res.redirect(`/plans/${plan._id}`)
   }
 } catch (err) {
