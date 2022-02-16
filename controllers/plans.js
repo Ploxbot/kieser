@@ -9,14 +9,22 @@ router.get('/', (req, res) => {
 })
 
 //CREATE PLAN VIEW CONTROLLER
-router.get('/create', (req, res) => {
-  console.log('creat plan page')
-  res.render('plans/create')
+router.get('/create', (req, res, next) => {
+  try {
+     //console.log('creat plan page')
+    if (!req.isAuthenticated()) {
+      res.render('login')
+    } else {
+      res.render('plans/create', { user: req.user })
+    }
+  } catch (err) {
+    next(err)
+  }
 })
 
 //ONE PLAN VIEW CONTROLLER
 router.get('/:id', (req, res) => {
-  console.log('one plan page')
+  //console.log('one plan page')
   res.render('plans/one')
 })
 
