@@ -5,5 +5,364 @@
     "img": "A1.png",
     "weight": 60,
     "duration": 0
+  },
+  {
+    "title": "A2",
+    "group": "Hips",
+    "img": "A2.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "A3",
+    "group": "Hips",
+    "img": "A3.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "A4",
+    "group": "Hips",
+    "img": "A4.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "A5",
+    "group": "Hips",
+    "img": "A5.png",
+    "weight": 60,
+    "duration": 0
+  },
+
+  {
+    "title": "B1",
+    "group": "Legs",
+    "img": "B1.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "B2",
+    "group": "Legs",
+    "img": "B2.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "B3",
+    "group": "Legs",
+    "img": "B3.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "B4",
+    "group": "Legs",
+    "img": "B4.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "B5",
+    "group": "Legs",
+    "img": "B5.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "B6",
+    "group": "Legs",
+    "img": "B6.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "i-B6",
+    "group": "Legs",
+    "img": "i-B6.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "B7",
+    "group": "Legs",
+    "img": "B7.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "B8",
+    "group": "Legs",
+    "img": "B8.png",
+    "weight": 60,
+    "duration": 0
+  },
+
+  {
+    "title": "C1",
+    "group": "Upper Back",
+    "img": "C1.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "C2",
+    "group": "Upper Back",
+    "img": "C2.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "C3",
+    "group": "Upper Back",
+    "img": "C3.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "C5",
+    "group": "Upper Back",
+    "img": "C5.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "C7",
+    "group": "Upper Back",
+    "img": "C7.png",
+    "weight": 60,
+    "duration": 0
+  },
+
+  {
+    "title": "D5",
+    "group": "Chest",
+    "img": "D5.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "D6",
+    "group": "Chest",
+    "img": "D6.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "D7",
+    "group": "Chest",
+    "img": "D7.png",
+    "weight": 60,
+    "duration": 0
+  },
+
+  {
+    "title": "E1",
+    "group": "Shoulder",
+    "img": "E1.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "E2",
+    "group": "Shoulder",
+    "img": "E2.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "E3",
+    "group": "Shoulder",
+    "img": "E3.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "E4",
+    "group": "Shoulder",
+    "img": "E4.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "E4",
+    "group": "Shoulder",
+    "img": "E4.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "E5",
+    "group": "Shoulder",
+    "img": "E5.png",
+    "weight": 60,
+    "duration": 0
+  },
+
+  {
+    "title": "F1.1",
+    "group": "Torso",
+    "img": "F1.1.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "F2.1",
+    "group": "Torso",
+    "img": "F2.1.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "F3.1",
+    "group": "Torso",
+    "img": "F3.1.png",
+    "weight": 60,
+    "duration": 0
+  },
+
+  {
+    "title": "G1",
+    "group": "Neck",
+    "img": "G1.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "G3",
+    "group": "Neck",
+    "img": "G3.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "G4",
+    "group": "Neck",
+    "img": "G4.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "G5",
+    "group": "Neck",
+    "img": "G5.png",
+    "weight": 60,
+    "duration": 0
+  },
+
+  {
+    "title": "H1",
+    "group": "Arms",
+    "img": "H1.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "H2",
+    "group": "Arms",
+    "img": "H2.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "H3",
+    "group": "Arms",
+    "img": "H3.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "H4",
+    "group": "Arms",
+    "img": "H4.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "H5",
+    "group": "Arms",
+    "img": "H5.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "H6",
+    "group": "Arms",
+    "img": "H6.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "H7",
+    "group": "Arms",
+    "img": "H7.png",
+    "weight": 60,
+    "duration": 0
+  },
+
+  {
+    "title": "J1",
+    "group": "Multi-Tower",
+    "img": "J1.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "J2",
+    "group": "Multi-Tower",
+    "img": "J2.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "J3",
+    "group": "Multi-Tower",
+    "img": "J3.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "J4",
+    "group": "Multi-Tower",
+    "img": "J4.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "J5",
+    "group": "Multi-Tower",
+    "img": "J5.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "J9",
+    "group": "Multi-Tower",
+    "img": "J9.png",
+    "weight": 60,
+    "duration": 0
+  },
+
+  {
+    "title": "K2",
+    "group": "Reck-Tower",
+    "img": "K2.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "K3",
+    "group": "Reck-Tower",
+    "img": "K4.png",
+    "weight": 60,
+    "duration": 0
+  },
+  {
+    "title": "K4",
+    "group": "Reck-Tower",
+    "img": "K4.png",
+    "weight": 60,
+    "duration": 0
   }
 ]
