@@ -85,6 +85,20 @@ router.patch('/', (req, res) => {
   res.send('findAndModify a plan')
 })
 
-//
+//DELETE PLAN 
+router.delete('/:id', async (req, res, next) => {
+  try {
+    if (!req.isAuthenticated()) {
+      res.render('/auth/login')
+    } else {
+      let deletedPlan = await Plans.findByIdAndDelete(req.params.id)
+
+      // console.log({ deletedPlan })
+      res.redirect('/plans')
+    }
+  } catch (err) {
+    next(err)
+  }
+})
 
 module.exports = router
