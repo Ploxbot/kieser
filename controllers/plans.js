@@ -53,9 +53,18 @@ router.get('/:id', async (req, res, next) => {
 })
 
 //EDIT PLAN VIEW CONTROLLER
-router.get('/:id/edit', (req, res) => {
-  console.log('update plan page')
-  res.render('plans/edit')
+router.get('/:id/edit', async (req, res, next) => {
+  try {
+    if (!req.isAuthenticated()) {
+      res.render('login')
+    } else {
+      let editedPlan = await Plans.findById(req.params.id).populate('user')
+      //console.log('EDITED PLAN', editedPlan)
+      res.render('plans/edit', { user: req.user, editedPlan })
+    }
+  } catch (err) {
+    next(err)
+  }
 })
 
 //CREAT PLAN POST CONTROLLER
@@ -80,9 +89,22 @@ try {
 
 
 //EDIT PLAN PATCH CONTROLLER
-router.patch('/', (req, res) => {
-  console.log('findAndModify a plan')
-  res.send('findAndModify a plan')
+router.patch('/:id', async (req, res, next) => {
+  try {
+    if (!req.isAuthenticated()) {
+      res.render('login')
+    } else {
+      let updatedPlan = await Plans.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true }
+      )
+      //console.log({ updatedPlan })
+      res.redirect(`/plans/${updatedPlan._id}`)
+    }
+  } catch (err) {
+    next(err)
+  }
 })
 
 //DELETE PLAN 
