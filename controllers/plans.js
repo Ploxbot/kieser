@@ -8,10 +8,25 @@ const Users = require('../models/users')
 
 
 //PLANS VIEW CONTROLLER
-router.get('/', (req, res) => {
-  console.log('planspage')
-  res.render('plans/list')
+
+router.get('/', async (req, res, next) => {
+  try {
+    if (!req.isAuthenticated()) {
+      res.render('login')
+    } else {
+      let user = await Users.findById(req.user._id)
+      console.log(user)
+      //req.query.user = req.user._id
+      let plan = await Plans.find({user: req.user._id})
+      //console.log(plan)
+      res.render('plans/list', { user: req.user, user, plan })
+    }
+  } catch (err) {
+    next(err)
+  }
 })
+
+
 
 //CREATE PLAN VIEW CONTROLLER
 router.get('/create', (req, res, next) => {
