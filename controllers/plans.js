@@ -28,9 +28,13 @@ router.get('/create', (req, res, next) => {
 })
 
 //ONE PLAN VIEW CONTROLLER
-router.get('/:id', (req, res) => {
-  //console.log('one plan page')
-  res.render('plans/one')
+router.get('/:id', async (req, res, next) => {
+  try {
+    let plans = await Plans.findById(req.params.id).populate('user')
+    res.render('plans/one', { user: req.user, plans })
+  } catch (err) {
+    next(err)
+  }
 })
 
 //EDIT PLAN VIEW CONTROLLER
@@ -47,7 +51,7 @@ try {
   } else {
     req.body.user = req.user._id
     req.body.title = 'Plan X'
-    console.log(req.body)
+    //console.log(req.body)
     let plan = await Plans.create(req.body)
     //console.log(house)
     res.redirect(`/plans/${plan._id}`)
