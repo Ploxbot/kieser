@@ -23,7 +23,7 @@ module.exports = mongoose.model(
       required: true
     },
     duration: {
-      type: Date, //TIME ???
+      type: Number,
       dafault: 0,
       required: true
     },
@@ -36,7 +36,8 @@ module.exports = mongoose.model(
     lean1: Number,
     lean2: String,
     legs1: String,
-    legs2: [Number, String], //two values
+    legs2n: Number,
+    legs2s: String,
     heel: Number,
     spann: Number,
     ball: Number,
