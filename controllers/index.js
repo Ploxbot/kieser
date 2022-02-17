@@ -65,14 +65,14 @@ router.post('/signup', async (req, res, next) => {
         email: req.body.email,
         password: hashedPwd,
       });
-      res.send(insertResult);
-      req.login(user, err => {
+      req.login(insertResult, err => {
         if (err) {
           throw err
         } else {
           res.redirect('/plans')
         }
       })
+      res.send(insertResult);
     }
   } catch (err) {
     next(err)
