@@ -9,7 +9,6 @@ let i = 0;
 
 start.addEventListener("click", startCounter); 
 stop.addEventListener("click", stopCounter); 
-reset.addEventListener("click", resetCounter); 
 
 function startCounter(){ 
     interval = setInterval(function() { 
