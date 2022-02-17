@@ -87,13 +87,26 @@
   text-align: left;
 }
 
-.planElement {
+.mElement {
   width: 80px;
   height: 80px;
   background-color: #1a4369;
   border-radius: 20%;
 }
-.planElementText {
+.mElementText {
+  color: #fff;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+.pElement {
+  width: 340px;
+  height: 80px;
+  background-color: #1a4369;
+  border-radius: 5%;
+}
+
+.pElementText {
   color: #fff;
   text-decoration: none;
   font-size: 40px;
