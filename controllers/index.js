@@ -1,6 +1,11 @@
 // PACKAGES
 const express = require('express')
 const router = express.Router()
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+const myPlaintextPassword = 's0/\/\P4$$w0rD';
+const someOtherPlaintextPassword = 'not_bacon';
+
 
 //Models
 const Users = require('../models/users')
@@ -27,9 +32,10 @@ router.post('/', async (req, res, next) => {
     let loginUser = await Users.findOne({
       email: req.body.email,
       password: req.body.password
-    })
-    //console.log(loginUser)
+    }) 
     if (loginUser) {
+      const cmp = await bcrypt.compare(req.body.password, req.user.password);
+    } else if (cmp) {
       req.login(loginUser, err => {
         if (err) {
           throw err
@@ -45,6 +51,8 @@ router.post('/', async (req, res, next) => {
   }
 })
 
+
+
 //SIGNUP POST CONTROLLER
 router.post('/signup', async (req, res, next) => {
   try {
@@ -52,8 +60,12 @@ router.post('/signup', async (req, res, next) => {
     if (existingUser) {
       throw new Error('User already exist!')
     } else {
-      let user = await Users.create(req.body)
-      //console.log({user})
+      const hashedPwd = await bcrypt.hash(req.body.password, saltRounds);
+      const insertResult = await Users.create({
+        email: req.body.email,
+        password: hashedPwd,
+      });
+      res.send(insertResult);
       req.login(user, err => {
         if (err) {
           throw err
