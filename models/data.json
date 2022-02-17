@@ -4,14 +4,18 @@
     "group": "Hips",
     "img": "A1.png",
     "weight": 60,
-    "duration": 0
+    "duration": 0,
+    "pillow": "small",
+    "range": [0, 21]
   },
   {
     "title": "A2",
     "group": "Hips",
     "img": "A2.png",
     "weight": 60,
-    "duration": 0
+    "duration": 0,
+    "pillow": "small",
+    "leg": "tight"
   },
   {
     "title": "A3",
