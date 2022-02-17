@@ -20,29 +20,14 @@
 		</ul>
 	</div>
 </div>
-<div>
   <center>
-    <div id="timer" class="text-white" style="font-size: 100px">
-      <span id="mins">00:</span>
-      <span id="seconds">00</span>
-    </div>
-    <div id="controls">
-			<button
-				id="start"
-				class="rounded-pill text-white border-0 px-5 py-2"
-				style="background-color: #2391d2; font-size: 30px"
-			>
-				Start
-			</button>
-			<button
-				id="stop"
-				class="rounded-pill text-white border-0 px-5 py-2"
-				style="background-color: #2391d2; font-size: 30px"
-			>
-				Stop
-			</button>
-    </div>
+	<div id="container">
+		<div>
+		<span class="text-white" id="counter" style="font-size: 100px"></span>
+		</div>
+		<button id="start" class="rounded-pill text-white border-0 px-5 py-2" style="background-color: rgb(29,113,187); font-size: 30px">Start</button>
+		<button id="stop" class="rounded-pill text-white border-0 px-5 py-2" style="background-color: rgb(29,113,187); font-size: 30px">Stop</button>
+	</div>
   </center>
 </div>
 {{> navbar}}
-<script src="script.js"></script>

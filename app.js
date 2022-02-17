@@ -10,10 +10,7 @@ const hbs = require('hbs')
 const hbsUtils = require('hbs-utils')(hbs)
 const methodOverride = require('method-override')
 require('dotenv').config()
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
-const myPlaintextPassword = 's0/\/\P4$$w0rD';
-const someOtherPlaintextPassword = 'not_bacon';
+
 
 // Build the App
 const app = express()
@@ -45,6 +42,7 @@ app.use(bodyParser.json())
 app.use(cookieParser())
 app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'public')))
+
 
 // Database
 mongoose.connect(
