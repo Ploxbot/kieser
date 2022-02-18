@@ -1,21 +1,28 @@
 // Packages
 const express = require('express')
 const router = express.Router()
+const moment = require('moment')
 
 //Models
 const Records = require('../models/records')
 const Plans = require('../models/plans')
 
 //RECORDS VIEW CONTROLLER
-router.get('/', (req, res) => {
-  //console.log('recordspage')
-  res.render('records/list')
+router.get('/', async (req, res, next) => {
+  try {
+    let record = await Records.find({})
+    console.log(record)
+    res.render('records/list', { user: req.user, record })
+  } catch (err) {
+    next(err)
+  }
 })
+
 //ONE RECORD VIEW CONTROLLER
 router.get('/:id', async (req, res, next) => {
   try {
     let record = await Records.findById(req.params.id).populate('user')
-    console.log(record)
+    //console.log(record)
     res.render('records/one', { user: req.user, record })
   } catch (err) {
     next(err)

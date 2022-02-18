@@ -1,5 +1,6 @@
 //IMPORTS
 const mongoose = require('mongoose')
+const { format } = require('morgan')
 const ObjectId = mongoose.Schema.Types.ObjectId
 
 
@@ -27,7 +28,7 @@ module.exports = mongoose.model('records', {
 	duration: {
 		type: Number,
 		required: true
-	},
+	}
 	// plan: {
 	// 	type: ObjectId,
 	// 	ref: 'plans',
