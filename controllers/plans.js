@@ -5,6 +5,7 @@ const router = express.Router()
 //Models
 const Plans = require('../models/plans')
 const Users = require('../models/users')
+const Machines = require('../models/machines')
 
 
 //PLANS VIEW CONTROLLER
@@ -18,7 +19,6 @@ router.get('/', async (req, res, next) => {
       //console.log(user)
       //req.query.user = req.user._id
       let plan = await Plans.find({user: req.user._id})
-      //console.log(plan)
       res.render('plans/list', { user: req.user, user, plan })
     }
   } catch (err) {
@@ -29,13 +29,24 @@ router.get('/', async (req, res, next) => {
 
 
 //CREATE PLAN VIEW CONTROLLER
-router.get('/create', (req, res, next) => {
+router.get('/create', async (req, res, next) => {
   try {
      //console.log('create plan page')
     if (!req.isAuthenticated()) {
       res.render('login')
     } else {
-      res.render('plans/create', { user: req.user })
+      let hips = await Machines.find({ group: "Hips"})
+      //console.log(hips)
+      let legs = await Machines.find({ group: "Legs" })
+      let upperBack = await Machines.find({ group: "Upper Back" })
+      let chest = await Machines.find({ group: "Chest" })
+      let shoulder = await Machines.find({ group: "Shoulder" })
+      let torso = await Machines.find({ group: "Torso" })
+      let neck = await Machines.find({ group: "Neck" })
+      let arms = await Machines.find({ group: "Arms" })
+      let multiTower = await Machines.find({ group: "Multi-Tower" })
+      let reckTower = await Machines.find({ group: "Reck-Tower" })
+      res.render('plans/create', { user: req.user, hips, legs, upperBack, chest, shoulder, torso, neck, arms, multiTower, reckTower })
     }
   } catch (err) {
     next(err)
