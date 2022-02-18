@@ -69,7 +69,7 @@ router.get('/:id/edit', async (req, res, next) => {
     if (!req.isAuthenticated()) {
       res.render('login')
     } else {
-     //let editedPlan = await Plans.findById(req.params.id).populate('user')
+     let plan = await Plans.findById(req.params.id).populate('user')
      let hips = await Machines.find({ group: "Hips"})
       //console.log(hips)
       let legs = await Machines.find({ group: "Legs" })
@@ -81,7 +81,7 @@ router.get('/:id/edit', async (req, res, next) => {
       let arms = await Machines.find({ group: "Arms" })
       let multiTower = await Machines.find({ group: "Multi-Tower" })
       let reckTower = await Machines.find({ group: "Reck-Tower" })
-      res.render('plans/edit', { user: req.user, hips, legs, upperBack, chest, shoulder, torso, neck, arms, multiTower, reckTower })
+      res.render('plans/edit', { user: req.user, hips, legs, upperBack, chest, shoulder, torso, neck, arms, multiTower, reckTower, plan})
     }
   } catch (err) {
     next(err)

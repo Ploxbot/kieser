@@ -7,16 +7,16 @@
 	class="container text-center text-white mt-3 p-0"
 	style="background-color: rgb(0,21,31);"
 >
-	<form action="/plans/{{._id}}?_method=patch" method="post">
+	<form action="/plans/{{plan._id}}?_method=patch" method="post">
 		<div class="">
 			<hr class="my-1">
-			{{#each groups as |group| }}
-			<label for="">{{group._id}}</label>
+			
+			<label for="">Hips</label>
 			<ul class="list-inline m-0 text-start">
 				{{#each hips as |h|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-					 	<input id="{{h.title}}" name="machines" value="{{h.title}}" type="checkbox"/>
+					 	<input id="{{h.title}}" name="machines" value="{{h.title}}" type="checkbox" >
 		    		<label for="{{h.title}}">{{h.title}}</label>
 					</div>
 				</li>
@@ -30,7 +30,7 @@
 				{{#each legs as |l|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-					 	<input id="{{l.title}}" name="machines" value="{{l.title}}" type="checkbox"/>
+					 	<input id="{{l.title}}" name="machines" value="{{l.title}}" type="checkbox" >
 		    		<label for="{{l.title}}">{{l.title}}</label>
 					</div>
 				</li>
@@ -44,7 +44,7 @@
 				{{#each upperBack as |ub|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-					 	<input id="{{ub.title}}" name="machines" value="{{ub.title}}" type="checkbox"/>
+					 	<input id="{{ub.title}}" name="machines" value="{{ub.title}}" type="checkbox" />
 		    		<label for="{{ub.title}}">{{ub.title}}</label>
 					</div>
 				</li>
@@ -58,7 +58,7 @@
 				{{#each chest as |c|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="{{c.title}}" name="machines" value="{{c.title}}" type="checkbox">
+						<input id="{{c.title}}" name="machines" value="{{c.title}}" type="checkbox" >
 						<label for="{{c.title}}">{{c.title}}</label>
 					 </div>
 				</li>
@@ -72,7 +72,7 @@
 				{{#each shoulder as |s|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="{{s.title}}" name="machines" value="{{s.title}}" type="checkbox">
+						<input id="{{s.title}}" name="machines" value="{{s.title}}" type="checkbox" 
 						<label for="{{s.title}}">{{s.title}}</label>
 					 </div>
 				</li>
@@ -86,7 +86,7 @@
 				{{#each torso as |t|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="{{t.title}}" name="machines" value="{{t.title}}" type="checkbox">
+						<input id="{{t.title}}" name="machines" value="{{t.title}}" type="checkbox" >
 						<label for="{{t.title}}">{{t.title}}</label>
 					 </div>
 				</li>
@@ -100,7 +100,7 @@
 				{{#each neck as |n|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="{{n.title}}" name="machines" value="{{n.title}}" type="checkbox">
+						<input id="{{n.title}}" name="machines" value="{{n.title}}" type="checkbox" >
 						<label for="{{n.title}}">G1</label>
 					 </div>
 				</li>
@@ -114,7 +114,7 @@
 				{{#each arms as |a|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="{{a.title}}" name="machines" value="{{a.title}}" type="checkbox">
+						<input id="{{a.title}}" name="machines" value="{{a.title}}" type="checkbox" >
 						<label for="{{a.title}}">{{a.title}}</label>
 					 </div>
 				</li>
@@ -128,7 +128,7 @@
 				{{#each multiTower as |mt|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="{{mt.title}}" name="machines" value="{{mt.title}}" type="checkbox">
+						<input id="{{mt.title}}" name="machines" value="{{mt.title}}" type="checkbox" />
 						<label for="{{mt.title}}">{{mt.title}}</label>
 					 </div>
 				</li>
@@ -142,13 +142,12 @@
 				{{#each reckTower as |rt|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="{{rt.title}}" name="machines" value="{{rt.title}}" type="checkbox">
+						<input id="{{rt.title}}" name="machines" value="{{rt.title}}" type="checkbox" />
 						<label for="{{rt.title}}">{{rt.title}}</label>
 					 </div>
 				</li>
 				{{/each}}
 			</ul>
-			{{/each}}
 		</div>
 		<button
 			class="bLight rounded-pill text-white border-0 px-5 py-2 mt-4"
