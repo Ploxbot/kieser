@@ -1,9 +1,8 @@
 const counter = document.querySelector("#counter"); 
-const reset = document.querySelector("#reset"); 
 const start = document.querySelector("#start"); 
 const stop = document.querySelector("#stop"); 
 
-counter.innerHTML = 00; 
+counter.value = 0; 
 let interval; 
 let i = 0; 
 
@@ -12,7 +11,7 @@ stop.addEventListener("click", stopCounter);
 
 function startCounter(){ 
     interval = setInterval(function() { 
-      counter.innerHTML= i++; 
+      counter.value = i++; 
     }, 1000); 
   } 
    

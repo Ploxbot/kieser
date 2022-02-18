@@ -1,5 +1,8 @@
 //IMPORTS
 const mongoose = require('mongoose')
+const { format } = require('morgan')
+const ObjectId = mongoose.Schema.Types.ObjectId
+
 
 //RECORDS MODEL
 
@@ -14,8 +17,8 @@ module.exports = mongoose.model('records', {
 	// 	required: true
 	// },
 	machine: {
-		type: ObjectId,
-		ref: 'machines'
+		type: String,
+		//ref: 'machines'
 	},
 	date: {
 		type: Date,
@@ -26,4 +29,9 @@ module.exports = mongoose.model('records', {
 		type: Number,
 		required: true
 	}
+	// plan: {
+	// 	type: ObjectId,
+	// 	ref: 'plans',
+	// 	required: true
+	// }
 })
