@@ -56,8 +56,6 @@ module.exports = mongoose.model(
     tower: Number,
     belt: String,
     rope: String
-  },
-  {
-    strict: false
   }
 )
+

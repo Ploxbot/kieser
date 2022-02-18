@@ -1,6 +1,7 @@
 <div class="header m-0 p-3 text-white">
+	{{#each machines as |machine|}}
 	<h1 class="header m-0 p-0">
-		Machine A1
+		Machine {{machine.title}}
 	</h1>
 </div>
 <div
@@ -8,16 +9,17 @@
 	style="background-color: rgb(0,21,31);"
 >
 	<img
-		src="/images/a1.png"
+		src="{{machine.img}}"
 	class="img-responsive mw-100 m-0 p-0"
 	/>
 	<div class="container text-start text-white m-0 p-0">
 		<label for="">Adjustments:</label>
 		<ul>
-			<li>Weight: 60 lbs</li>
+			<li>Weight: {{machine.weight}} lbs</li>
 			<li>Pillow: No</li>
-			<li>Range: 10-20</li>
+			<li>Range: {{machine.range}}</li>
 		</ul>
+		{{/each}}
 	</div>
 </div>
   <center>

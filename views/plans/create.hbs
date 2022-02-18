@@ -18,391 +18,140 @@
 			<hr class="my-1">
 			<label for="">Hips</label>
 			<ul class="list-inline m-0 text-start">
+				{{#each hips as |h|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-					 	<input id="A1" name="machines" value="A1" type="checkbox"/>
-		    		<label for="A1">A1</label>
+					 	<input id="{{h.title}}" name="machines" value="{{h.title}}" type="checkbox"/>
+		    		<label for="{{h.title}}">{{h.title}}</label>
 					</div>
 				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="A2" name="machines" value="A2" type="checkbox"/>
-		    		<label for="A2">A2</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="A3" name="machines" value="A3" type="checkbox"/>
-		    		<label for="A3">A3</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="A4" name="machines" value="A4" type="checkbox"/>
-		    		<label for="A4">A4</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="A5" name="machines" value="A5" type="checkbox"/>
-		    		<label for="A5">A5</label>
-					</div>
-				</li>
-
+				{{/each}}
 			</ul>
 		</div>
 		<div class="">
 			<hr class="my-1">
 			<label for="">Legs</label>
 			<ul class="list-inline m-0">
+				{{#each legs as |l|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-					 	<input id="B1" name="machines" value="B1" type="checkbox"/>
-		    		<label for="B1">B1</label>
+					 	<input id="{{l.title}}" name="machines" value="{{l.title}}" type="checkbox"/>
+		    		<label for="{{l.title}}">{{l.title}}</label>
 					</div>
 				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="B2" name="machines" value="B2" type="checkbox"/>
-		    		<label for="B2">B2</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="B3" name="machines" value="B3" type="checkbox"/>
-		    		<label for="B3">B3</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="B4" name="machines" value="B4" type="checkbox"/>
-		    		<label for="B4">B4</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="B5" name="machines" value="B5" type="checkbox"/>
-		    		<label for="B5">B5</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="B6" name="machines" value="B6" type="checkbox"/>
-		    		<label for="B6">B6</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="B7" name="machines" value="B7" type="checkbox"/>
-		    		<label for="B7">B7</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="B8" name="machines" value="B8" type="checkbox"/>
-		    		<label for="B8">B8</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="B9" name="machines" value="B9" type="checkbox"/>
-		    		<label for="B9">B9</label>
-					</div>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 		<div class="">
 			<hr class="my-1">
 			<label for="">Upper Back</label>
 			<ul class="list-inline m-0">
+				{{#each upperBack as |ub|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-					 	<input id="C1" name="machines" value="C1" type="checkbox"/>
-		    		<label for="C1">C1</label>
+					 	<input id="{{ub.title}}" name="machines" value="{{ub.title}}" type="checkbox"/>
+		    		<label for="{{ub.title}}">{{ub.title}}</label>
 					</div>
 				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="C2" name="machines" value="C2" type="checkbox"/>
-		    		<label for="C2">C2</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="C3" name="machines" value="C3" type="checkbox"/>
-		    		<label for="C3">C3</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="C4" name="machines" value="C4" type="checkbox"/>
-		    		<label for="C4">C4</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="C5" name="machines" value="C5" type="checkbox"/>
-		    		<label for="C5">C5</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="C6" name="machines" value="C6" type="checkbox"/>
-		    		<label for="C6">C6</label>
-					</div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-					 	<input id="C7" name="machines" value="C7" type="checkbox"/>
-		    		<label for="C7">C7</label>
-					</div>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 		<div class="">
 			<hr class="my-1">
 			<label for="">Chest</label>
 			<ul class="list-inline m-0">
+				{{#each chest as |c|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="D5" name="machines" value="D5" type="checkbox">
-						<label for="D5">D5</label>
+						<input id="{{c.title}}" name="machines" value="{{c.title}}" type="checkbox">
+						<label for="{{c.title}}">{{c.title}}</label>
 					 </div>
 				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="D6" name="machines" value="D6" type="checkbox">
-						<label for="D6">D6</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="D7" name="machines" value="D7" type="checkbox">
-						<label for="D7">D7</label>
-					 </div>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 		<div class="">
 			<hr class="my-1">
 			<label for="">Shoulder</label>
 			<ul class="list-inline m-0">
+				{{#each shoulder as |s|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="E1" name="machines" value="E1" type="checkbox">
-						<label for="E1">E1</label>
+						<input id="{{s.title}}" name="machines" value="{{s.title}}" type="checkbox">
+						<label for="{{s.title}}">{{s.title}}</label>
 					 </div>
 				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="E2" name="machines" value="E2" type="checkbox">
-						<label for="E2">E2</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="E3" name="machines" value="E3" type="checkbox">
-						<label for="E3">E3</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="E4" name="machines" value="E4" type="checkbox">
-						<label for="E4">E4</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="E5" name="machines" value="E5" type="checkbox">
-						<label for="E5">E5</label>
-					 </div>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 		<div>
 			<hr class="my-1">
 			<label for="">Torso</label>
 			<ul class="list-inline m-0">
+				{{#each torso as |t|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="F1" name="machines" value="F1" type="checkbox">
-						<label for="F1">F1</label>
+						<input id="{{t.title}}" name="machines" value="{{t.title}}" type="checkbox">
+						<label for="{{t.title}}">{{t.title}}</label>
 					 </div>
 				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="F2" name="machines" value="F2" type="checkbox">
-						<label for="F2">F2</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="F3" name="machines" value="F3" type="checkbox">
-						<label for="F3">F3</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="F4" name="machines" value="F4" type="checkbox">
-						<label for="F4">F4</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="F5" name="machines" value="F5" type="checkbox">
-						<label for="F5">F5</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="F6" name="machines" value="F6" type="checkbox">
-						<label for="F6">F6</label>
-					 </div>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 		<div>
 			<hr class="my-1">
 			<label for="">Neck</label>
 			<ul class="list-inline m-0">
+				{{#each neck as |n|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="G1" name="machines" value="G1" type="checkbox">
-						<label for="G1">G1</label>
+						<input id="{{n.title}}" name="machines" value="{{n.title}}" type="checkbox">
+						<label for="{{n.title}}">G1</label>
 					 </div>
 				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="G3" name="machines" value="G3" type="checkbox">
-						<label for="G3">G3</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="G4" name="machines" value="G4" type="checkbox">
-						<label for="G4">G4</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="G5" name="machines" value="G5" type="checkbox">
-						<label for="G5">G5</label>
-					 </div>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 		<div>
 			<label for="">Arms</label>
 			<hr class="my-1">
 			<ul class="list-inline m-0">
+				{{#each arms as |a|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="H1" name="machines" value="H1" type="checkbox">
-						<label for="H1">H1</label>
+						<input id="{{a.title}}" name="machines" value="{{a.title}}" type="checkbox">
+						<label for="{{a.title}}">{{a.title}}</label>
 					 </div>
 				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="H2" name="machines" value="H2" type="checkbox">
-						<label for="H2">H2</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="H3" name="machines" value="H3" type="checkbox">
-						<label for="H3">H3</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="H4" name="machines" value="H4" type="checkbox">
-						<label for="H4">H4</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="H5" name="machines" value="H5" type="checkbox">
-						<label for="H5">H5</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="H6" name="machines" value="H6" type="checkbox">
-						<label for="H6">H6</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="H7" name="machines" value="H7" type="checkbox">
-						<label for="H7">H7</label>
-					 </div>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 		<div>
 			<hr class="my-1">
 			<label for="">Multi-Tower</label>
 			<ul class="list-inline m-0">
+				{{#each multiTower as |mt|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="J1" name="machines" value="J1" type="checkbox">
-						<label for="J1">J1</label>
+						<input id="{{mt.title}}" name="machines" value="{{mt.title}}" type="checkbox">
+						<label for="{{mt.title}}">{{mt.title}}</label>
 					 </div>
 				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="J2" name="machines" value="J2" type="checkbox">
-						<label for="J2">J2</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="J3" name="machines" value="J3" type="checkbox">
-						<label for="J3">J3</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="J4" name="machines" value="J4" type="checkbox">
-						<label for="J4">J4</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="J5" name="machines" value="J5" type="checkbox">
-						<label for="J5">J5</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="J9" name="machines" value="J9" type="checkbox">
-						<label for="J9">J9</label>
-					 </div>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 		<div>
 			<hr class="my-1">
 			<label for="">Reck-Tower</label>
 			<ul class="list-inline m-0">
+				{{#each reckTower as |rt|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-						<input id="K2" name="machines" value="K2" type="checkbox">
-						<label for="K2">K2</label>
+						<input id="{{rt.title}}" name="machines" value="{{rt.title}}" type="checkbox">
+						<label for="{{rt.title}}">{{rt.title}}</label>
 					 </div>
 				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="K3" name="machines" value="K3" type="checkbox">
-						<label for="K3">K3</label>
-					 </div>
-				</li>
-				<li class="list-inline-item m-2">
-					 <div class="inputGroup">
-						<input id="K4" name="machines" value="K4" type="checkbox">
-						<label for="K4">K4</label>
-					 </div>
-				</li>
+				{{/each}}
 			</ul>
 		</div>
 	</form>
