@@ -112,7 +112,7 @@ router.patch('/:id', async (req, res, next) => {
 router.delete('/:id', async (req, res, next) => {
   try {
     if (!req.isAuthenticated()) {
-      res.render('/auth/login')
+      res.render('login')
     } else {
       let deletedPlan = await Plans.findByIdAndDelete(req.params.id)
       // console.log({ deletedPlan })
