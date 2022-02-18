@@ -19,16 +19,140 @@
 			{{#each groups as |group| }}
 			<label for="">{{group._id}}</label>
 			<ul class="list-inline m-0 text-start">
-
-				{{#each group.machines as |machine|}}
+				{{#each hips as |h|}}
 				<li class="list-inline-item m-2">
 					 <div class="inputGroup">
-					 	<input id="{{machine.title}}" name="machines" value="{{machine._id}}" type="checkbox"/>
-		    		<label for="{{machine.title}}">{{machine.title}}</label>
+					 	<input id="{{h.title}}" name="machines" value="{{h.title}}" type="checkbox"/>
+		    		<label for="{{h.title}}">{{h.title}}</label>
 					</div>
 				</li>
 				{{/each}}
-				<hr class="my-1">
+			</ul>
+		</div>
+		<div class="">
+			<hr class="my-1">
+			<label for="">Legs</label>
+			<ul class="list-inline m-0">
+				{{#each legs as |l|}}
+				<li class="list-inline-item m-2">
+					 <div class="inputGroup">
+					 	<input id="{{l.title}}" name="machines" value="{{l.title}}" type="checkbox"/>
+		    		<label for="{{l.title}}">{{l.title}}</label>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div class="">
+			<hr class="my-1">
+			<label for="">Upper Back</label>
+			<ul class="list-inline m-0">
+				{{#each upperBack as |ub|}}
+				<li class="list-inline-item m-2">
+					 <div class="inputGroup">
+					 	<input id="{{ub.title}}" name="machines" value="{{ub.title}}" type="checkbox"/>
+		    		<label for="{{ub.title}}">{{ub.title}}</label>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div class="">
+			<hr class="my-1">
+			<label for="">Chest</label>
+			<ul class="list-inline m-0">
+				{{#each chest as |c|}}
+				<li class="list-inline-item m-2">
+					 <div class="inputGroup">
+						<input id="{{c.title}}" name="machines" value="{{c.title}}" type="checkbox">
+						<label for="{{c.title}}">{{c.title}}</label>
+					 </div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div class="">
+			<hr class="my-1">
+			<label for="">Shoulder</label>
+			<ul class="list-inline m-0">
+				{{#each shoulder as |s|}}
+				<li class="list-inline-item m-2">
+					 <div class="inputGroup">
+						<input id="{{s.title}}" name="machines" value="{{s.title}}" type="checkbox">
+						<label for="{{s.title}}">{{s.title}}</label>
+					 </div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div>
+			<hr class="my-1">
+			<label for="">Torso</label>
+			<ul class="list-inline m-0">
+				{{#each torso as |t|}}
+				<li class="list-inline-item m-2">
+					 <div class="inputGroup">
+						<input id="{{t.title}}" name="machines" value="{{t.title}}" type="checkbox">
+						<label for="{{t.title}}">{{t.title}}</label>
+					 </div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div>
+			<hr class="my-1">
+			<label for="">Neck</label>
+			<ul class="list-inline m-0">
+				{{#each neck as |n|}}
+				<li class="list-inline-item m-2">
+					 <div class="inputGroup">
+						<input id="{{n.title}}" name="machines" value="{{n.title}}" type="checkbox">
+						<label for="{{n.title}}">G1</label>
+					 </div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div>
+			<label for="">Arms</label>
+			<hr class="my-1">
+			<ul class="list-inline m-0">
+				{{#each arms as |a|}}
+				<li class="list-inline-item m-2">
+					 <div class="inputGroup">
+						<input id="{{a.title}}" name="machines" value="{{a.title}}" type="checkbox">
+						<label for="{{a.title}}">{{a.title}}</label>
+					 </div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div>
+			<hr class="my-1">
+			<label for="">Multi-Tower</label>
+			<ul class="list-inline m-0">
+				{{#each multiTower as |mt|}}
+				<li class="list-inline-item m-2">
+					 <div class="inputGroup">
+						<input id="{{mt.title}}" name="machines" value="{{mt.title}}" type="checkbox">
+						<label for="{{mt.title}}">{{mt.title}}</label>
+					 </div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div>
+			<hr class="my-1">
+			<label for="">Reck-Tower</label>
+			<ul class="list-inline m-0">
+				{{#each reckTower as |rt|}}
+				<li class="list-inline-item m-2">
+					 <div class="inputGroup">
+						<input id="{{rt.title}}" name="machines" value="{{rt.title}}" type="checkbox">
+						<label for="{{rt.title}}">{{rt.title}}</label>
+					 </div>
+				</li>
+				{{/each}}
 			</ul>
 			{{/each}}
 		</div>
