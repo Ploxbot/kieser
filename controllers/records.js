@@ -11,7 +11,7 @@ const Plans = require('../models/plans')
 router.get('/', async (req, res, next) => {
   try {
     let record = await Records.find({})
-    console.log(record)
+    //console.log(record)
     res.render('records/list', { user: req.user, record })
   } catch (err) {
     next(err)
@@ -22,8 +22,9 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
   try {
     let record = await Records.findById(req.params.id).populate('user')
-    //console.log(record)
-    res.render('records/one', { user: req.user, record })
+    let allRecords = await Records.find({})
+    //console.log(allRecords)
+    res.render('records/one', { user: req.user, record, allRecords})
   } catch (err) {
     next(err)
   }
@@ -45,6 +46,22 @@ router.post('/', async (req, res, next) => {
     next(err)
   }
 })
+
+//DELETE PLAN 
+router.delete('/:id', async (req, res, next) => {
+  try {
+    if (!req.isAuthenticated()) {
+      res.render('login')
+    } else {
+      let deletedRecord = await Records.findByIdAndDelete(req.params.id)
+      // console.log({ deletedRecord })
+      res.redirect('/records')
+    }
+  } catch (err) {
+    next(err)
+  }
+})
+
 
 
 module.exports = router
