@@ -1,6 +1,6 @@
 <div class="header m-0 p-3 text-white">
 	<h1 class="header m-0 p-0">
-		{{plan.title}}
+		{{plans.title}}
 	</h1>
 </div>
 <div
@@ -10,13 +10,13 @@
 <div class="">
 	<ul class="list-inline m-2 ">
 		{{#each plans.machines as |machine|}}
-		<li class="planElement list-inline-item m-2 p-2 text-center">
-			<a href="../machines/asd" class="planElementText text-center" >{{machine}}</a>
+		<li class="mElement list-inline-item m-2 p-2 text-center">
+			<a href="../machines/asd" class="mElementText text-center" >{{machine}}</a>
 		</li>
 		{{/each}}
 	</ul>
 </div>
-<a href="{{plan._id}}/edit">
+<a href="{{plans._id}}/edit">
 <button
 		class="bLight rounded-pill text-white border-0 px-5 py-2 mt-4"
 	>
