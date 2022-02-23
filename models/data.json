@@ -1,6 +1,7 @@
 [
   {
     "title": "A1",
+    "groupNumber": "1",
     "group": "Hips",
     "img": "A1.png",
     "weight": 60,
@@ -10,6 +11,7 @@
   },
   {
     "title": "A2",
+    "groupNumber": "1",
     "group": "Hips",
     "img": "A2.png",
     "weight": 60,
@@ -19,6 +21,7 @@
   },
   {
     "title": "A3",
+    "groupNumber": "1",
     "group": "Hips",
     "img": "A3.png",
     "weight": 60,
@@ -26,6 +29,7 @@
   },
   {
     "title": "A4",
+    "groupNumber": "1",
     "group": "Hips",
     "img": "A4.png",
     "weight": 60,
@@ -33,6 +37,7 @@
   },
   {
     "title": "A5",
+    "groupNumber": "1",
     "group": "Hips",
     "img": "A5.png",
     "weight": 60,
@@ -41,6 +46,7 @@
 
   {
     "title": "B1",
+    "groupNumber": "2",
     "group": "Legs",
     "img": "B1.png",
     "weight": 60,
@@ -48,6 +54,7 @@
   },
   {
     "title": "B2",
+    "groupNumber": "2",
     "group": "Legs",
     "img": "B2.png",
     "weight": 60,
@@ -55,6 +62,7 @@
   },
   {
     "title": "B3",
+    "groupNumber": "2",
     "group": "Legs",
     "img": "B3.png",
     "weight": 60,
@@ -62,6 +70,7 @@
   },
   {
     "title": "B4",
+    "groupNumber": "2",
     "group": "Legs",
     "img": "B4.png",
     "weight": 60,
@@ -69,6 +78,7 @@
   },
   {
     "title": "B5",
+    "groupNumber": "2",
     "group": "Legs",
     "img": "B5.png",
     "weight": 60,
@@ -76,6 +86,7 @@
   },
   {
     "title": "B6",
+    "groupNumber": "2",
     "group": "Legs",
     "img": "B6.png",
     "weight": 60,
@@ -83,6 +94,7 @@
   },
   {
     "title": "i-B6",
+    "groupNumber": "2",
     "group": "Legs",
     "img": "i-B6.png",
     "weight": 60,
@@ -90,6 +102,7 @@
   },
   {
     "title": "B7",
+    "groupNumber": "2",
     "group": "Legs",
     "img": "B7.png",
     "weight": 60,
@@ -97,6 +110,7 @@
   },
   {
     "title": "B8",
+    "groupNumber": "2",
     "group": "Legs",
     "img": "B8.png",
     "weight": 60,
@@ -105,6 +119,7 @@
 
   {
     "title": "C1",
+    "groupNumber": "3",
     "group": "Upper Back",
     "img": "C1.png",
     "weight": 60,
@@ -112,6 +127,7 @@
   },
   {
     "title": "C2",
+    "groupNumber": "3",
     "group": "Upper Back",
     "img": "C2.png",
     "weight": 60,
@@ -119,6 +135,7 @@
   },
   {
     "title": "C3",
+    "groupNumber": "3",
     "group": "Upper Back",
     "img": "C3.png",
     "weight": 60,
@@ -126,6 +143,7 @@
   },
   {
     "title": "C5",
+    "groupNumber": "3",
     "group": "Upper Back",
     "img": "C5.png",
     "weight": 60,
@@ -133,6 +151,7 @@
   },
   {
     "title": "C7",
+    "groupNumber": "3",
     "group": "Upper Back",
     "img": "C7.png",
     "weight": 60,
@@ -141,6 +160,7 @@
 
   {
     "title": "D5",
+    "groupNumber": "4",
     "group": "Chest",
     "img": "D5.png",
     "weight": 60,
@@ -148,6 +168,7 @@
   },
   {
     "title": "D6",
+    "groupNumber": "4",
     "group": "Chest",
     "img": "D6.png",
     "weight": 60,
@@ -155,6 +176,7 @@
   },
   {
     "title": "D7",
+    "groupNumber": "4",
     "group": "Chest",
     "img": "D7.png",
     "weight": 60,
@@ -163,6 +185,7 @@
 
   {
     "title": "E1",
+    "groupNumber": "5",
     "group": "Shoulder",
     "img": "E1.png",
     "weight": 60,
@@ -170,6 +193,7 @@
   },
   {
     "title": "E2",
+    "groupNumber": "5",
     "group": "Shoulder",
     "img": "E2.png",
     "weight": 60,
@@ -177,6 +201,7 @@
   },
   {
     "title": "E3",
+    "groupNumber": "5",
     "group": "Shoulder",
     "img": "E3.png",
     "weight": 60,
@@ -184,6 +209,7 @@
   },
   {
     "title": "E4",
+    "groupNumber": "5",
     "group": "Shoulder",
     "img": "E4.png",
     "weight": 60,
@@ -191,6 +217,7 @@
   },
   {
     "title": "E4",
+    "groupNumber": "5",
     "group": "Shoulder",
     "img": "E4.png",
     "weight": 60,
@@ -198,6 +225,7 @@
   },
   {
     "title": "E5",
+    "groupNumber": "5",
     "group": "Shoulder",
     "img": "E5.png",
     "weight": 60,
@@ -206,6 +234,7 @@
 
   {
     "title": "F1.1",
+    "groupNumber": "6",
     "group": "Torso",
     "img": "F1.1.png",
     "weight": 60,
@@ -213,6 +242,7 @@
   },
   {
     "title": "F2.1",
+    "groupNumber": "6",
     "group": "Torso",
     "img": "F2.1.png",
     "weight": 60,
@@ -220,6 +250,7 @@
   },
   {
     "title": "F3.1",
+    "groupNumber": "6",
     "group": "Torso",
     "img": "F3.1.png",
     "weight": 60,
@@ -228,6 +259,7 @@
 
   {
     "title": "G1",
+    "groupNumber": "7",
     "group": "Neck",
     "img": "G1.png",
     "weight": 60,
@@ -235,6 +267,7 @@
   },
   {
     "title": "G3",
+    "groupNumber": "7",
     "group": "Neck",
     "img": "G3.png",
     "weight": 60,
@@ -242,6 +275,7 @@
   },
   {
     "title": "G4",
+    "groupNumber": "7",
     "group": "Neck",
     "img": "G4.png",
     "weight": 60,
@@ -249,6 +283,7 @@
   },
   {
     "title": "G5",
+    "groupNumber": "7",
     "group": "Neck",
     "img": "G5.png",
     "weight": 60,
@@ -257,6 +292,7 @@
 
   {
     "title": "H1",
+    "groupNumber": "8",
     "group": "Arms",
     "img": "H1.png",
     "weight": 60,
@@ -264,6 +300,7 @@
   },
   {
     "title": "H2",
+    "groupNumber": "8",
     "group": "Arms",
     "img": "H2.png",
     "weight": 60,
@@ -271,6 +308,7 @@
   },
   {
     "title": "H3",
+    "groupNumber": "8",
     "group": "Arms",
     "img": "H3.png",
     "weight": 60,
@@ -278,6 +316,7 @@
   },
   {
     "title": "H4",
+    "groupNumber": "8",
     "group": "Arms",
     "img": "H4.png",
     "weight": 60,
@@ -285,6 +324,7 @@
   },
   {
     "title": "H5",
+    "groupNumber": "8",
     "group": "Arms",
     "img": "H5.png",
     "weight": 60,
@@ -292,6 +332,7 @@
   },
   {
     "title": "H6",
+    "groupNumber": "8",
     "group": "Arms",
     "img": "H6.png",
     "weight": 60,
@@ -299,6 +340,7 @@
   },
   {
     "title": "H7",
+    "groupNumber": "8",
     "group": "Arms",
     "img": "H7.png",
     "weight": 60,
@@ -307,6 +349,7 @@
 
   {
     "title": "J1",
+    "groupNumber": "9",
     "group": "Multi-Tower",
     "img": "J1.png",
     "weight": 60,
@@ -314,6 +357,7 @@
   },
   {
     "title": "J2",
+    "groupNumber": "9",
     "group": "Multi-Tower",
     "img": "J2.png",
     "weight": 60,
@@ -321,6 +365,7 @@
   },
   {
     "title": "J3",
+    "groupNumber": "9",
     "group": "Multi-Tower",
     "img": "J3.png",
     "weight": 60,
@@ -328,6 +373,7 @@
   },
   {
     "title": "J4",
+    "groupNumber": "9",
     "group": "Multi-Tower",
     "img": "J4.png",
     "weight": 60,
@@ -335,6 +381,7 @@
   },
   {
     "title": "J5",
+    "groupNumber": "9",
     "group": "Multi-Tower",
     "img": "J5.png",
     "weight": 60,
@@ -342,6 +389,7 @@
   },
   {
     "title": "J9",
+    "groupNumber": "9",
     "group": "Multi-Tower",
     "img": "J9.png",
     "weight": 60,
@@ -350,6 +398,7 @@
 
   {
     "title": "K2",
+    "groupNumber": "10",
     "group": "Reck-Tower",
     "img": "K2.png",
     "weight": 60,
@@ -357,6 +406,7 @@
   },
   {
     "title": "K3",
+    "groupNumber": "10",
     "group": "Reck-Tower",
     "img": "K4.png",
     "weight": 60,
@@ -364,6 +414,7 @@
   },
   {
     "title": "K4",
+    "groupNumber": "10",
     "group": "Reck-Tower",
     "img": "K4.png",
     "weight": 60,
