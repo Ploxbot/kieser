@@ -61,7 +61,6 @@ router.post('/', async (req, res, next) => {
     if (loginUser) {
       const cmp = await bcrypt.compare(req.body.password, loginUser.password);
       if (cmp) {
-      console.log('THIS IS WORKING')
       req.login(loginUser, err => {
         if (err) {
           throw err

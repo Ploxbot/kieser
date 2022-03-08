@@ -6,10 +6,9 @@ const router = express.Router()
 const Machines = require('../models/machines')
 
 //MACHINES VIEW CONTROLLER
-router.get('/:id', async (req, res, next) => {
+router.get('/:title', async (req, res, next) => {
   try {
-    let machines = await Machines.find({})
-    //console.log(machines)
+    let machines = await Machines.findOne({title: req.params.title})
     res.render('machines/one', { user: req.user, machines })
   } catch (err) {
     next(err)

@@ -57,6 +57,7 @@ router.get('/create', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
   try {
     let plans = await Plans.findById(req.params.id).populate('user')
+    //console.log(plans)
     res.render('plans/one', { user: req.user, plans })
   } catch (err) {
     next(err)
