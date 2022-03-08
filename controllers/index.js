@@ -25,34 +25,6 @@ router.get('/info', (req, res) => {
   res.render('info')
 })
 
-//LOGIN POST CONTROLLER
-
-router.post('/', async (req, res, next) => {
-  try {
-    let loginUser = await Users.findOne({
-      email: req.body.email,
-      password: req.body.password
-    }) 
-    if (loginUser) {
-      const cmp = await bcrypt.compare(req.body.password, req.user.password);
-    } else if (cmp) {
-      req.login(loginUser, err => {
-        if (err) {
-          throw err
-        } else {
-          res.redirect('/plans')
-        }
-      })
-    } else {
-      throw new Error('Whrong email or password!')
-    }
-  } catch (err) {
-    next(err)
-  }
-})
-
-
-
 //SIGNUP POST CONTROLLER
 router.post('/signup', async (req, res, next) => {
   try {
@@ -78,5 +50,36 @@ router.post('/signup', async (req, res, next) => {
     next(err)
   }
 })
+
+//LOGIN POST CONTROLLER
+
+router.post('/', async (req, res, next) => {
+  try {
+    let loginUser = await Users.findOne({
+      email: req.body.email
+    }) 
+    if (loginUser) {
+      const cmp = await bcrypt.compare(req.body.password, loginUser.password);
+      if (cmp) {
+      console.log('THIS IS WORKING')
+      req.login(loginUser, err => {
+        if (err) {
+          throw err
+        } else {
+          res.redirect('/plans')
+        }
+      })
+     } else {
+      throw new Error('Whrong email or password!')
+     }
+  }
+  } catch (err) {
+    next(err)
+  }
+})
+
+
+
+
 
 module.exports = router
