@@ -2,6 +2,8 @@
 const mongoose = require('mongoose')
 const { format } = require('morgan')
 const ObjectId = mongoose.Schema.Types.ObjectId
+const moment = require('moment');
+
 
 
 //RECORDS MODEL
@@ -21,8 +23,8 @@ module.exports = mongoose.model('records', {
 		//ref: 'machines'
 	},
 	date: {
-		type: Date,
-		default: Date.now,
+		type: String,
+		default: moment().format('DD-MM-YYYY'),
 		required: true
 	},
 	duration: {
