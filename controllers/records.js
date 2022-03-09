@@ -7,6 +7,7 @@ const moment = require('moment')
 const Records = require('../models/records')
 const Plans = require('../models/plans')
 
+
 //RECORDS VIEW CONTROLLER
 router.get('/', async (req, res, next) => {
   try {
@@ -23,7 +24,7 @@ router.get('/:id', async (req, res, next) => {
   try {
     let record = await Records.findById(req.params.id).populate('user')
     let allRecords = await Records.find({})
-    console.log(allRecords)
+    //console.log(allRecords)
     res.render('records/one', { user: req.user, record, allRecords})
   } catch (err) {
     next(err)
