@@ -28,7 +28,7 @@ module.exports = mongoose.model('records', {
 		required: true
 	},
 	duration: {
-		type: Number,
+		type: String,
 		required: true
 	},
 	 weight: {

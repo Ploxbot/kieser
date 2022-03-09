@@ -11,7 +11,7 @@
 		src="{{machines.img}}"
 	class="img-responsive mw-100 m-0 p-0"
 	/>
-	<div class="container text-start text-white m-0 p-0">
+	<div class="container text-start text-white mt-2 p-0">
 		<label for="">Adjustments:</label>
 		<ul>
 			<li>Weight: {{machines.weight}} lbs</li>
@@ -21,12 +21,12 @@
 	</div>
 </div>
   <center>
-	  <form action="/machines/{{machines.title}}" method="post">
+	  <form action="/machines/{{machines.title}}" method="post">	  
 		<div>
-		<input type="text" name="duration" class="timer input-padding-y-5 bg-transparent" id="counter" style="font-size: 100px" value="" readonly></input>
+		<input name="duration" class="timerDisplay bg-transparent px-5 py-2 ms-4" style="font-size: 45px" value = "00 : 00 : 00" readonly></input>
 		</div>
-		<button type="button" id="start" class="rounded-pill text-white border-0 px-5 py-2" style="background-color: rgb(29,113,187); font-size: 30px">Start</button>
-		<button type="button" id="stop" class="rounded-pill text-white border-0 px-5 py-2" style="background-color: rgb(29,113,187); font-size: 30px">Stop</button>
+		<button type="button" id="startTimer" class="rounded-pill text-white border-0 px-5 py-2" style="background-color: rgb(29,113,187); font-size: 30px">Start</button>
+		<button type="button" id="stopTimer" class="rounded-pill text-white border-0 px-5 py-2" style="background-color: rgb(29,113,187); font-size: 30px">Stop</button>
 		<button class="rounded-pill text-white border-0 px-5 py-2 mt-2" style="background-color: rgb(29,113,187); font-size: 30px">Record</button>
 	</form>
   </center>

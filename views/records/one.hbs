@@ -17,12 +17,13 @@
 					<div class="col-6">
 						<h2>{{all.machine}}</h2>
 						{{!-- <p class="text-start">Weight: 60 lbs</p> DO NOT KNOW HOW TO GET THIS INFORMATION YET --}}
-						<p class="text-start">Duration: {{all.duration}} Sec</p>
+						<p class="text-start">Duration:</p>
+						<p class="text-start">{{all.duration}}</p>
 					</div>
 					<div class="col-6 text-center">
 						<form action="/records/{{all._id}}?_method=delete" method="post">
 						<button
-							class="rounded-pill text-white border-0 px-4 py-1"
+							class="rounded-pill text-white border-0 px-4 py-1 mt-4"
 							style="background-color: rgb(26,67,105); font-size: 15px"
 						>
 							<svg

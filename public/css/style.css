@@ -134,6 +134,7 @@
   font-size: 40px;
 }
 
-#counter {
+.timerDisplay {
   color: white;
+  border: transparent;
 }
