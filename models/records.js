@@ -28,10 +28,8 @@ module.exports = mongoose.model('records', {
 	duration: {
 		type: Number,
 		required: true
+	},
+	 weight: {
+		type: String,
 	}
-	// plan: {
-	// 	type: ObjectId,
-	// 	ref: 'plans',
-	// 	required: true
-	// }
 })
