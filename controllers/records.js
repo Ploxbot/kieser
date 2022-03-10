@@ -60,7 +60,7 @@ router.delete('/:id', async (req, res, next) => {
       let record = await Records.findById(req.params.id).populate('user')
       let deletedRecord = await Records.findByIdAndDelete(req.params.id)
       // console.log({ deletedRecord })
-      res.redirect(`/records/${record.user}`)
+      res.redirect('/records')
     }
   } catch (err) {
     next(err)
