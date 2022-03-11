@@ -38,7 +38,10 @@ router.get('/:date', async (req, res, next) => {
   try {
     let record = await Records.find({date: req.params.date}).populate('user')
     let date = record[0].date
-    res.render('records/one', { user: req.user, record, date})
+    let firstRecord = record.shift()
+    //console.log(firstRecord)
+    //let firstRecord = record[0]
+    res.render('records/one', { user: req.user, record, date, firstRecord})
   } catch (err) {
     next(err)
   }
