@@ -11,38 +11,47 @@ router.get('/', async (req, res, next) => {
     if (!req.isAuthenticated()) {
       res.render('login')
     } else {
+      let records = await Records.find({})
+      //console.log(records)
+      const getSameDate = (a) => {
+        let onlyDate = new Set()
+        a.forEach(element  => {
+          onlyDate.add(element.date)
+
+        });
+        return onlyDate
+      }
+      let dates = getSameDate(records)
+      //console.log(dates)
+      
     let record = await Records.find({})
     //console.log(record)
-    res.render('records/list', { user: req.user, record })
+    res.render('records/list', { user: req.user, record, dates})
   }
   } catch (err) {
     next(err)
   }
 })
 
-
-//TEST
-
 //ONE RECORD VIEW CONTROLLER
-router.get('/:id', async (req, res, next) => {
+router.get('/:date', async (req, res, next) => {
   try {
-    let record = await Records.findById(req.params.id).populate('user')
-    let allRecords = await Records.find({user: record.user._id})
-    res.render('records/one', { user: req.user, record, allRecords})
+    let record = await Records.find({date: req.params.date}).populate('user')
+    res.render('records/one', { user: req.user, record})
   } catch (err) {
     next(err)
   }
 })
 
 //DELETE RECORD OF A DAY
-router.delete('/:user/:id', async (req, res, next) => {
+router.delete('/:date', async (req, res, next) => {
   try {
     if (!req.isAuthenticated()) {
       res.render('login')
     } else {
-      let record = await Records.findById(req.params.id).populate('user')
+      let record = await Records.find({date: req.params.date}).populate('user')
       //console.log(record.user._id)
-      let deletedRecord = await Records.findByIdAndDelete(req.params.id)
+      let deletedRecord = await Records.findOneAndDelete({date: req.params.date})
       //console.log({ deletedRecord })
       res.redirect('/records')
     }
@@ -52,15 +61,15 @@ router.delete('/:user/:id', async (req, res, next) => {
 })
 
 //DELETE SINGLE RECORD
-router.delete('/:id', async (req, res, next) => {
+router.delete('/:date/:id', async (req, res, next) => {
   try {
     if (!req.isAuthenticated()) {
       res.render('login')
     } else {
       let record = await Records.findById(req.params.id).populate('user')
       let deletedRecord = await Records.findByIdAndDelete(req.params.id)
-      // console.log({ deletedRecord })
-      res.redirect('/records')
+      //console.log({ deletedRecord })
+      res.redirect(`/records/${record.date}`)
     }
   } catch (err) {
     next(err)

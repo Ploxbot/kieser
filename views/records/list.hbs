@@ -11,14 +11,14 @@
 	style="background-color: rgb(0,21,31);"
 >
 	<ul class="m-0 p-0" >
-		{{#each record as |r|}}
+		{{#each dates as |date|}}
 		<li class="m-3 p-3 list-unstyled text-white" style="width: 340px; height: 60px; background-color: rgba(26,67,105,1)">
 			<div class="row">
 				<div class="col-6">
-					<a href="/records/{{r._id}}" class="text-white text-center" >{{r.date}}</a>
+					<a href="/records/{{date}}" class="text-white text-center" >{{date}}</a>
 				</div>
 				<div class="col-6 text-center">
-					<form action="/records/{{r.user}}/{{r._id}}?_method=delete" method="post">
+					<form action="/records/{{date}}?_method=delete" method="post">
 					<button
 					class="rounded-pill text-end border-0 "
 					style="background-color: rgb(26,67,105); font-size: 15px"

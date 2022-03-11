@@ -28,12 +28,13 @@ router.post('/:title', async (req, res, next) => {
       req.body.machine = machines.title
       let record = await Records.create(req.body)
       //console.log(record)
-      res.redirect(`/records/${record._id}`)
+      res.redirect(`/records/${record.date}`)
     }
   } catch (err) {
     next(err)
   }
 })
+
 
 
 module.exports = router
