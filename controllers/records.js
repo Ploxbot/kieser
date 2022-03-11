@@ -37,7 +37,8 @@ router.get('/', async (req, res, next) => {
 router.get('/:date', async (req, res, next) => {
   try {
     let record = await Records.find({date: req.params.date}).populate('user')
-    res.render('records/one', { user: req.user, record})
+    let date = record[0].date
+    res.render('records/one', { user: req.user, record, date})
   } catch (err) {
     next(err)
   }
